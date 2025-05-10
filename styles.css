@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,13 @@ html, body {
     background-color: #F7E9E9;
     font-family: '315Karusel', 'Comic Sans MS', cursive, sans-serif;
     color: #2C1E1E;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 0 20px;
 }
 
 img {
@@ -120,6 +128,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     overflow: hidden;
@@ -133,6 +143,8 @@ button {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -374,6 +386,7 @@ button {
 }
 
 .contact-icons .icon::before {
+
     color: #FFFFFF;
 }
 
@@ -414,6 +427,10 @@ button {
 
     .card img {
         height: auto;
+    }
+
+    .wrapper {
+        padding: 0 10px;
     }
 
     .about-section {
