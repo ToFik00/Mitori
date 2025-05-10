@@ -342,26 +342,31 @@ button {
 
 .about-content {
     display: flex;
+    flex-direction: row; /* строго горизонтальный ряд */
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 .about-text {
-    flex: 1 1 50%;
-    font-size: 1em;
-    line-height: 1.6;
+    flex: 1; /* занимает левую половину */
+    padding-right: 20px; /* отступ справа между текстом и фото */
+    text-align: left;
 }
 
-.about-text p {
 
-    margin-bottom: 0;
+.about-text p {
+    font-size: 1.8rem; /* около 18px — подберите под ваш дизайн */
+    line-height: 1.6; /* межстрочный интервал для «больше строк» */
+    margin-bottom: 1em; /* небольшой отступ снизу, если несколько абзацев */
+    max-width: none; /* убираем возможные ограничения по ширине */
 }
 
 .about-image {
-    flex: 1 1 50%;
-    text-align: center;
+    flex: 1; /* занимает правую половину */
+    padding-left: 20px; /* отступ слева между фото и текстом */
+    text-align: right; /* выравнивание фото по правому краю */
 }
+
 
 .about-image img {
     max-width: 100%;
