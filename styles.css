@@ -182,41 +182,48 @@ button {
     background-color: #ff6b3d;
 }
 
-
+/* Обновленные стили для навигации-плашек */
 .category-nav {
-    background-color: #F7E9E9;
-    padding: 10px;
-    text-align: center;
     position: sticky;
     top: 0;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    padding: 12px 0;
+    text-align: center;
     z-index: 500;
 }
 
 .category-nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: center; /* выравниваем по центру */
+    gap: 24px; /* увеличенный пробел между кнопками */
+    margin: 0;
+    padding: 0;
 }
 
 .category-nav a {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background-color: #F0EEEE;
+    display: block;
+    width: 180px; /* одинаковая ширина для всех */
+    padding: 14px 0; /* вертикальный отступ */
+    border-radius: 30px;
+    background-color: #F4E4E4;
     color: #2C1E1E;
     text-decoration: none;
-    font-size: 0.95em;
+    font-size: 1.15em;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s;
 }
 
 .category-nav a.active {
-    background-color: #F3C7C7;
-    font-weight: bold;
+    background-color: #E4AFAF;
+    font-weight: 600;
 }
 
 .category-nav a:hover {
-    background-color: #e8bebe;
+    background-color: #E1B3B3;
 }
 
 
