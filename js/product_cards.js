@@ -36,6 +36,6 @@ document.addEventListener('click', e => {
     if (!btn) return;
     const slug = btn.dataset.slug;
     if (slug) {
-        window.location.href = `product.html?slug=${encodeURIComponent(slug)}`;
+        window.location.href = `single_product.html?slug=${encodeURIComponent(slug)}`;
     }
 });
