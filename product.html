@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiToRi — блюдо</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="product_styles.css" />
+</head>
+<body class="single-product">
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <span class="logo-img">🍣</span>
+      <span class="logo-text">MiToRi</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#menu-section">Меню</a></li>
+        <li><a href="index.html#about">О нас</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="delivery-btn">Доставка</a>
+      <a href="#" class="cart-link" aria-label="Корзина">🛒</a>
+      <button class="burger" aria-label="Меню">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrapper">
+
+  <main id="product">
+    <section class="hero">
+      <h1 id="hero-title"></h1>
+    </section>
+
+    <section class="info">
+      <div class="summary">
+        <div>
+          <h2 class="info-title">О блюде</h2>
+          <p id="product-price" class="card-price"></p>
+          <p id="product-desc"  class="card-desc"></p>
+        </div>
+        <button class="btn add-to-cart" id="addBtn">
+          В корзину <span class="plus">+</span>
+        </button>
+      </div>
+
+      <div class="composition">
+        <div class="composition-inner">
+          <div class="comp-left">
+            <h2>Состав</h2>
+            <ul id="product-comp"></ul>
+            <p class="nutr">
+              <span id="product-weight"></span>&nbsp;&nbsp;
+              <span id="product-kcal"></span>
+            </p>
+          </div>
+
+          <img id="product-thumb" class="comp-thumb" src="" alt="">
+        </div>
+      </div>
+
+      <div class="steps">
+        <h2>Способ приготовления</h2>
+        <ol id="product-steps"></ol>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts" class="site-footer">
+    <div class="footer-content">
+      <h2>Контакты</h2>
+      <div class="contact-icons">
+        <span class="icon">👥</span>
+        <span class="icon">☎️</span>
+        <span class="icon">✉️</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="js/product.js" type="module"></script>
+</body>
+</html>

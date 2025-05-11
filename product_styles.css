@@ -1,0 +1,169 @@
+/* product_styles.css ─ стили исключительно для product.html */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 0 20px;
+}
+
+/*  HERO-баннер*/
+.hero {
+    position: relative;
+    margin-top: 0;
+    padding-top: 80px;
+    height: 260px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    /* фон-картинка задаётся в JS */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    z-index: 1;
+}
+
+.hero h1 {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: #fff;
+    text-align: center;
+    font-family: '315Karusel', 'Comic Sans MS', cursive, sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+/* 3. INFO-контейнер («О блюде», Состав, Шаги)*/
+.info {
+    background: #F7E9E9;
+    margin-top: -30px;
+    border-radius: 30px;
+    padding: 2rem 1.5rem 3rem;
+}
+
+/* 3.1 Заголовок, описание, кнопка*/
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.8rem;
+    flex-wrap: nowrap;
+    padding: 1.4rem 0 2.2rem;
+}
+
+/* «О блюде» */
+.info-title {
+    font-size: 2.6rem;
+    color: #D47F8A;
+    margin: 0 0 .6rem;
+    line-height: 1;
+}
+
+.card-desc {
+    font-size: 1.25rem;
+    color: #7F6565;
+    line-height: 1.45;
+}
+
+/* большая кнопка*/
+.btn.add-to-cart {
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #FF7F50;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    transition: opacity .25s;
+}
+.btn.add-to-cart .plus {
+    font-size: 1.5rem;
+    line-height: 0;
+    transform: translateY(-1px);
+}
+.btn.add-to-cart:hover { opacity: .85; }
+
+/*3.2 Блок «Состав» */
+.composition,
+.steps {
+    background: #E49A71;
+    border-radius: 24px;
+    padding: 1.8rem 1.5rem;
+    margin-top: 2rem;
+    color: #fff;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, .15);
+}
+
+.composition h2,
+.steps h2 {
+    margin: 0 0 1.2rem;
+    font-size: 1.6rem;
+}
+
+/* раскладка: текст + фото */
+.composition-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 2rem;
+    align-items: start;
+}
+
+.comp-left {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.comp-left > h2 { margin-top: 0; }
+
+#product-comp {
+    list-style: disc;
+    margin: 0 0 1.2rem;
+    padding-left: 1rem;
+}
+
+.nutr {
+    margin-top: auto;
+    font-weight: 700;
+}
+
+.comp-thumb {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* 3.3 Список шагов */
+.steps ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+/* 4. Адаптив до 700 px*/
+@media (max-width: 700px) {
+    .summary              { flex-direction: column; align-items: flex-start; }
+    .btn.add-to-cart      { width: 100%; margin: 1.2rem 0 0; justify-content: center; }
+
+    .composition-inner { grid-template-columns: 1fr; }
+    .comp-thumb        { width: 100%; margin-top: 1.5rem; }
+}
