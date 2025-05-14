@@ -1,4 +1,4 @@
-import { addToCart } from "./add-to-card.js";
+import { updateCount } from "./update-card.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('../json/products.json')
@@ -46,6 +46,6 @@ document.addEventListener('click', e => {
     const cartBtn = e.target.closest('button.add-to-cart');
     if (cartBtn) {
         const title = cartBtn.dataset.title;
-        addToCart(title);
+        updateCount(title, 1);
     }
 });

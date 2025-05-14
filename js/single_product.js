@@ -1,4 +1,4 @@
-import { addToCart } from "./add-to-card.js";
+import { updateCount } from "./update-card.js";
 
 const slug = new URLSearchParams(location.search).get('slug');
 const heroSection = document.querySelector('.hero');
@@ -63,5 +63,5 @@ document.getElementById('addBtn');
 
 document.getElementById('addBtn').addEventListener('click', function() {
     const title = document.getElementById("hero-title").textContent;
-    addToCart(title); 
+    updateCount(title, 1); 
 });

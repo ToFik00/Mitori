@@ -163,6 +163,7 @@ main {
     flex: 1;
     overflow-y: auto;
     margin: 20px;
+    width: 100%;
 }
 
 #order-button {
@@ -198,6 +199,81 @@ main {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 32px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.product-details > *{
+    font: inherit;
+}
+
+.product-title {
+    font-weight: 400;
+}
+
+.product-price, .product-weight {
+    font-weight: 700;
+}
+
+.product-weight {
+    color: #868686;
+}
+
+.quantity-controls{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    gap: 30px;
+    width: 239px;
+    height: 59px;
+    border-radius: 15px;
+    background-color: #D4C3C3;
+    font: inherit;
+    font-weight: 700;
+}
+
+.product-image {
+    width: 162px;
+    height: 162px;
+    border-radius: 30px;
+    border: 1px solid #CC6A6A;
+}
+
+.card-divider {
+    display: flex;
+    width: 750px;
+    height: 2px;
+    border: none;
+    background-color: #CC6A6A;
+    justify-self: flex-end;
+    margin: 15px 0;
+}
+
+.quantity-btn img {
+    width: 41px;
+    height: 41px;
+}
+
+.empty {
+    display: flex;
+    justify-self: center;
 }
 
 footer {
