@@ -21,6 +21,7 @@ function generateProductCard(product, count) {
                 </div>
             </div>
         </div>
+        <hr class="card-divider">
     `;
 }
 
@@ -54,11 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cart.forEach((cartItem, index) => {
                 const product = products.find(p => p.title === cartItem.title);
                 if (product && cartItem.count > 0) {
-                    if (index != 0) {
-                        cardList.innerHTML += '<hr class="card-divider">';
-                    }
                     cardList.innerHTML += generateProductCard(product, cartItem.count);
-                    updatePrice(product.price);
+                    updatePrice(product.price * cartItem.count);
                 } else {
                     console.warn(`Товар "${cartItem.title}" не найден`);
                 }
