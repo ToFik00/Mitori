@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://db.onlinewebfonts.com/c/6901c6cae0d63f3e889863413e428394?family=F315karusel+Bold');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    margin-top: 0;
+    background-color: white;
+    padding: 0 30px;
+}
+
+header {
+    position: absolute;
+    background-image: url("../images/hero-back-1.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    margin: 30px 0;
+    width: 1024px;
+    height: 800px;
+    border-radius: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px ;
+    font-size: 24px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header a {
+    color: white;
+    text-decoration: none; 
+}
+
+header a:hover {
+    color: #929292;
+    text-decoration: none;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 52px;
+    z-index: 1;
+}
+
+.main-nav, .logo, .header-right {
+    position: relative;
+    z-index: 2;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Comic Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    font-size: 48px;
+}
+
+.logo-text {
+    color: white;
+    position: relative;
+    top: -0.25em;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.burger {
+    width: 39px;
+    height: 39px;
+}
+
+.logo-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+main {
+    position: relative;
+    background-color: #EFE4E4;
+    margin-top: 148px;
+    padding: 40px;
+    width: 1024px;
+    height: auto;
+    min-height: 690px;
+    border-radius: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 24px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 3;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 48px;
+    font-family: "F315karusel Bold";
+    font-weight: 700;
+}
+
+.top img {
+    width: 72px;
+    height: 72px;
+}
+
+.cards-list {
+    flex: 1;
+    overflow-y: auto;
+    margin: 20px;
+}
+
+#order-button {
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 100px;
+    border-radius: 36px;
+    background-color: rgb(253, 156, 91);
+    padding: 50px;
+    color:white;
+}
+
+.time {
+    font-size: 32px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.order-text {
+    font-size: 32px;
+    font-family: "F315karusel Bold";
+    font-weight: 700;
+}
+
+.price {
+    font-size: 32px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+footer {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding-top: 160px;
+    margin-top: -160px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    
+}
+
+.footer-content h2 {
+    font-size: 29px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.icon img{
+    width: 40px;
+    height: 40px;
+}

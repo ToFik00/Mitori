@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiToRi – Корзина</title>
+    <link rel="stylesheet" href="style/basket_styles.css" />
+</head>
+
+<body>
+<div class="wrapper">
+        <header class="ysabeau-office">
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#menu-section">Меню</a></li>
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="logo">
+                <img src="images/logo.png" class="logo-img">
+                <span class="logo-text">MiToRi</span>
+            </div>
+
+            <div class="header-right">
+                <a href="#order" class="delivery-btn">Доставка</a>
+                <a href="basket.html" class="cart-link" aria-label="Корзина">
+                    <img src="images/system/basket.png">
+                </a>
+                <button class="burger" aria-label="Меню"><img src="images/system/burger.png"></button>
+            </div>
+
+        </header>
+
+        <main>
+            <section class="top">
+                <a href="index.html" id="back" class="back" aria-label="Вернуться на главную">
+                    <img src="images/system/arrow.png">
+                </a>
+                <span class="hero-title">Корзина</span>
+                <button type="button" id="clear" class="clear">
+                    <img src="images/system/trash.png">
+                </button>
+            </section>
+
+            <section id="list" class="cards-list"></section>
+
+            <button type="submit" id="order-button">
+                <span id="time" class="time">20-30 минут</span>
+                <span id="order-text" class="order-text">Оформить заказ</span>
+                <span id="price" class="price"> 1234 рубля</span>
+            </button>
+        </main>
+</div>
+    <footer id="contacts" class="site-footer">
+        <div class="footer-content">
+            <h2>Контакты</h2>
+            <div class="contact-icons">
+                <span class="icon">
+                    <img src="images/system/users.png">
+                </span>
+                <span class="icon">
+                    <img src="images/system/phone.png">
+                </span>
+                <span class="icon">
+                    <img src="images/system/mail.png">
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

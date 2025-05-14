@@ -1,3 +1,5 @@
+import { addToCart } from "./add-to-card.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch('../json/products.json')
         .then(res => res.json())
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h3 class="card-title">${product.title}</h3>
               <p class="card-desc">${product.description}</p>
               <div class="card-buttons">
-                <button class="btn add-to-cart">В корзину</button>
+                <button class="btn add-to-cart" data-title="${product.title}">В корзину</button>
                 <button class="btn details" data-slug="${product.slug}">Подробнее</button>
                 
               </div>
@@ -37,5 +39,13 @@ document.addEventListener('click', e => {
     const slug = btn.dataset.slug;
     if (slug) {
         window.location.href = `single_product.html?slug=${encodeURIComponent(slug)}`;
+    }
+});
+
+document.addEventListener('click', e => {
+    const cartBtn = e.target.closest('button.add-to-cart');
+    if (cartBtn) {
+        const title = cartBtn.dataset.title;
+        addToCart(title);
     }
 });

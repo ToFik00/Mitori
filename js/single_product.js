@@ -1,3 +1,5 @@
+import { addToCart } from "./add-to-card.js";
+
 const slug = new URLSearchParams(location.search).get('slug');
 const heroSection = document.querySelector('.hero');
 const heroTitle   = document.getElementById('hero-title');
@@ -56,3 +58,10 @@ function showNotFound() {
     document.body.innerHTML =
         '<h2 style="text-align:center; padding: 2rem;">Блюдо не найдено</h2>';
 }
+
+document.getElementById('addBtn');
+
+document.getElementById('addBtn').addEventListener('click', function() {
+    const title = document.getElementById("hero-title").textContent;
+    addToCart(title); 
+});
