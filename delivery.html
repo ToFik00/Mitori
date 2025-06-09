@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiToRi – Доставка</title>
+  <link rel="stylesheet" href="style/basket_styles.css" />
+  <link rel="stylesheet" href="style/delivery_styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="ysabeau-office">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html#menu-section">Меню</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <img src="images/logo.png" class="logo-img" alt="MiToRi" />
+        <span class="logo-text">MiToRi</span>
+      </div>
+      <div class="header-right">
+        <a href="#order" class="delivery-btn">Доставка</a>
+        <a href="basket.html" class="cart-link"><img src="images/system/basket.png" alt="" /></a>
+        <button class="burger"><img src="images/system/burger.png" alt="" /></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="top">
+        <div style="width: 72px; height: 72px;">
+          <a href="basket.html" class="back"><img src="images/system/arrow.png" alt="Назад" /></a>
+        </div>
+        <span class="hero-title">Доставка</span>
+        <div style="width: 72px; height: 72px;"></div>
+      </section>
+
+      <div class="delivery-container">
+        <form id="delivery-form" class="delivery-form" novalidate>
+          <label>Имя получателя
+            <input type="text" name="name" maxlength="60" placeholder="Иван Иванов" required />
+            <span id="name-error" class="error-message"></span>
+          </label>
+
+          <label>Телефон
+            <input type="tel" name="phone" maxlength="18" placeholder="+7 (___) ___-__-__" required />
+            <span id="phone-error" class="error-message"></span>
+          </label>
+
+          <fieldset class="delivery-slot">
+            <legend>Дата и время доставки</legend>
+            <div id="slot-grid" class="slot-grid"></div>
+            <div id="custom-block" class="custom-time hidden">
+              <label>Дата
+                <select id="delivery-date"></select>
+              </label>
+              <label>Часы
+                <select id="delivery-hour"></select>
+              </label>
+              <label>Минуты
+                <select id="delivery-minute"></select>
+              </label>
+            </div>
+            <div id="time-error" class="error-message"></div>
+          </fieldset>
+
+          <fieldset class="payment-method">
+            <legend>Способ оплаты</legend>
+            <div class="pay-grid">
+              <button type="button" class="pay-btn active" data-value="cash">
+                Курьеру<br /><span>(нал/карта)</span>
+              </button>
+              <button type="button" class="pay-btn" data-value="online">Онлайн</button>
+            </div>
+            <input type="hidden" id="payment-input" name="payment" value="cash" />
+          </fieldset>
+
+          <fieldset class="address-block">
+            <legend>Адрес доставки</legend>
+            <div class="address-row">
+              <label>Город
+                <input type="text" name="city" maxlength="20" placeholder="Город" required />
+                <span id="city-error" class="error-message"></span>
+              </label>
+              <label>Улица
+                <input type="text" name="street" maxlength="20" placeholder="Улица" required />
+                <span id="street-error" class="error-message"></span>
+              </label>
+            </div>
+            <div class="address-row">
+              <label>Квартира/Дом
+                <input type="text" name="apartment" maxlength="20" placeholder="Квартира/Дом" required />
+                <span id="apartment-error" class="error-message"></span>
+              </label>
+              <label>Подъезд
+                <input type="text" name="entrance" maxlength="20" placeholder="Подъезд" />
+              </label>
+            </div>
+            <div class="address-row">
+              <label>Этаж
+                <input type="text" name="floor" maxlength="20" placeholder="Этаж" />
+              </label>
+              <label>Домофон
+                <input type="text" name="intercom" maxlength="20" placeholder="Домофон" />
+              </label>
+            </div>
+          </fieldset>
+
+          <label>Комментарий курьеру
+            <textarea name="comment" maxlength="300" rows="3"
+                      placeholder="Код домофона, предпочтительное время и т.д."></textarea>
+          </label>
+        </form>
+
+        <aside class="order-summary" id="order-summary">
+          <h3>Состав заказа</h3>
+          <ul id="summary-list"></ul>
+          <hr class="line" />
+          <div class="summary-extra"><span>Сервисный сбор</span><span id="service-fee">29 ₽</span></div>
+          <div class="summary-extra"><span>Доставка</span><span id="delivery-fee">0 ₽</span></div>
+          <hr class="line" />
+          <div class="total-line"><span>Сумма заказа</span><span id="order-total">0 ₽</span></div>
+          <p id="free-delivery-msg" class="remain"></p>
+        </aside>
+      </div>
+
+      <button type="submit" form="delivery-form" class="confirm-button" disabled>
+        Подтвердить заказ
+      </button>
+    </main>
+  </div>
+
+  <footer id="contacts" class="site-footer">
+    <div class="footer-content">
+      <h2>Контакты</h2>
+      <div class="contact-icons">
+        <span class="icon"><img src="images/system/users.png" alt=""></span>
+        <span class="icon"><img src="images/system/phone.png" alt=""></span>
+        <span class="icon"><img src="images/system/mail.png"  alt=""></span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/delivery.js"></script>
+</body>
+</html>
