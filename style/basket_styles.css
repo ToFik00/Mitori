@@ -177,6 +177,7 @@ main {
     background-color: rgb(253, 156, 91);
     padding: 50px;
     color:white;
+    text-decoration: none;
 }
 
 .time {
