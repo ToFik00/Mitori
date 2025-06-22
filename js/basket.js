@@ -114,3 +114,23 @@ document.getElementById('list').addEventListener('click', function (e) {
         updatePrice(-price);
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    burger.addEventListener('click', function() {
+        mobileNav.classList.add('active');
+    });
+    
+    closeBtn.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+    });
+});
+
+mobileNav.addEventListener('click', function(e) {
+    if (e.target === mobileNav) {
+        mobileNav.classList.remove('active');
+    }
+});

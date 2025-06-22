@@ -1,4 +1,6 @@
 /* product_styles.css ─ стили исключительно для single_product.html */
+@import url('https://db.onlinewebfonts.com/c/6901c6cae0d63f3e889863413e428394?family=F315karusel+Bold');
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,7 +41,7 @@
     padding: 0 1rem;
     color: #fff;
     text-align: center;
-    font-family: '315Karusel', 'Comic Sans MS', cursive, sans-serif;
+    font-family: "F315karusel Bold", 'Comic Sans MS', cursive, sans-serif;
     font-size: clamp(1.6rem, 4vw, 2.4rem);
     font-weight: 700;
     line-height: 1.15;

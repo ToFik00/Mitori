@@ -1,3 +1,6 @@
+@import url('https://db.onlinewebfonts.com/c/6901c6cae0d63f3e889863413e428394?family=F315karusel+Bold');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +11,7 @@
 html, body {
     height: 100%;
     background-color: #F7E9E9;
-    font-family: '315Karusel', 'Comic Sans MS', cursive, sans-serif;
+    font-family: "F315karusel Bold";
     color: #2C1E1E;
 }
 
@@ -48,7 +51,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    font-family: "Ysabeau Office", sans-serif;
     color: #FFFFFF;
 }
 
@@ -57,11 +60,18 @@ button {
     align-items: center;
     font-size: 1.2em;
     font-weight: bold;
+    padding-left: 10px;
+    font-family: 'Comic Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    gap: 5px;
 }
 
 .logo-img {
-    font-size: 1.5em;
-    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .logo-text {
@@ -415,14 +425,24 @@ button {
     margin-bottom: 10px;
 }
 
+.contact-icons {
+    display: flex;
+    justify-content: center;
+}
+
 .contact-icons .icon {
     font-size: 1.5em;
     margin: 0 10px;
     vertical-align: middle;
+    flex-direction: row;
+}
+
+.icon img{
+    width: 40px;
+    height: 40px;
 }
 
 .contact-icons .icon::before {
-
     color: #FFFFFF;
 }
 
