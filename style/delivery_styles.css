@@ -22,10 +22,9 @@ html, body {
 main {
     position: relative;
     background-color: #EFE4E4;
-    margin-top: 148px;
+    margin-top: -622px;
     padding: 40px;
     width: 1024px;
-    height: auto;
     min-height: 690px;
     border-radius: 52px;
     display: flex;
@@ -172,14 +171,9 @@ fieldset legend {
     width: auto;
 }
 
-#delivery-date {
-    max-width: 140px;
-}
-
+#delivery-date { max-width: 140px; }
 #delivery-hour,
-#delivery-minute {
-    max-width: 100px;
-}
+#delivery-minute { max-width: 100px; }
 
 .pay-grid {
     display: grid;
@@ -199,9 +193,7 @@ fieldset legend {
     text-align: center;
 }
 
-.pay-btn span {
-    font-size: 22px;
-}
+.pay-btn span { font-size: 22px; }
 
 .pay-btn.active {
     background: #FFF;
@@ -280,34 +272,11 @@ fieldset legend {
     text-transform: uppercase;
 }
 
-.confirm-button:hover {
-    filter: brightness(1.05);
-}
+.confirm-button:hover   { filter: brightness(1.05); }
+.confirm-button:disabled { opacity: .5; cursor: not-allowed; }
 
-.confirm-button:disabled {
-    opacity: .5;
-    cursor: not-allowed;
-}
-
-@media (max-width: 1000px) {
-    .delivery-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .order-summary {
-        width: 100%;
-    }
-}
-
-.address-row {
-    display: flex;
-    gap: 16px;
-}
-
-.address-row label {
-    flex: 1;
-}
+.address-row { display: flex; gap: 16px; }
+.address-row label { flex: 1; }
 
 .error-message {
     color: red;
@@ -318,6 +287,196 @@ fieldset legend {
 }
 
 input.invalid,
-select.invalid {
-    border-color: red !important;
+select.invalid { border-color: red !important; }
+
+.delivery-form input,
+.delivery-form textarea,
+.delivery-form select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
+
+.delivery-form label,
+.delivery-form .field-wrapper {
+    min-width: 0;
+}
+
+@media (max-width: 1000px) {
+    .delivery-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .order-summary { width: 100%; }
+}
+
+@media (max-width: 1024px) {
+    html,
+    body {
+        padding: 0 20px;
+        font-size: 14px;
+        overflow-x: hidden; 
+    }
+
+    .wrapper {
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main {
+        width: 100% !important;
+        max-width: 1024px;
+        margin-top: -520px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 30px 25px;
+        border-radius: 40px;
+    }
+
+    .order-summary { width: 100%; }
+
+    .slot-grid { grid-template-columns: repeat(2, 1fr); }
+    .pay-grid  { grid-template-columns: repeat(2, 1fr); }
+
+    .hero-banner {
+        width: calc(100% - 40px); 
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-radius: 40px 40px 0 0;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    html,
+    body {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .wrapper {
+        padding: 0 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main {
+        width: 100% !important;
+        max-width: 460px;
+        margin-top: -85px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 20px 10px;
+        border-radius: 30px;
+    }
+
+    .slot-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .pay-grid  { grid-template-columns: 1fr;            gap: 12px; }
+
+    .order-summary {
+        width: 100%;
+        padding: 20px 16px;
+        font-size: 22px;
+    }
+
+    .confirm-button {
+        width: 100%;
+        font-size: 24px;
+        margin-top: 24px;
+        padding: 18px 0;
+    }
+}
+
+@media (max-width: 430px) {
+    main,
+    .delivery-container,
+    .delivery-form,
+    .order-summary {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .delivery-form input,
+    .delivery-form textarea,
+    .delivery-form select {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        display: block;
+    }
+
+    .delivery-form label,
+    .delivery-form .field-wrapper,
+    .delivery-form .input-wrap {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+    }
+
+    .slot-grid,
+    .pay-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    main { overflow-x: hidden; }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+    main {
+        max-width: 100% !important;   
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-banner {
+        width: 100% !important;
+    }
+}
+
+@media (width: 904px) and (orientation: portrait) {
+    .pay-grid,
+    .slot-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        justify-items: stretch !important;
+    }
+    .pay-btn,
+    .slot-btn { width: 100% !important; }
+
+    .address-row { flex-direction: column !important; gap: 12px !important; }
+
+    .delivery-form { font-size: 26px; }
+}
+
+@media (width: 412px) and (orientation: portrait) {
+    .pay-grid,
+    .slot-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        justify-items: stretch !important;
+    }
+    .pay-btn,
+    .slot-btn { width: 100% !important; }
+
+    .address-row { flex-direction: column !important; gap: 12px !important; }
+    .delivery-form { font-size: 24px; }   
+}
+
+@media (max-width: 480px) {
+    .pay-grid,
+    .slot-grid { grid-template-columns: 1fr !important; }
+
+    .pay-btn,
+    .slot-btn,
+    .delivery-form input,
+    .delivery-form select,
+    .delivery-form textarea { width: 100% !important; }
+
+    .address-row { flex-direction: column !important; gap: 12px !important; }
+
+    main { overflow-x: hidden; }  
+}
+
