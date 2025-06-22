@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${product.image}" alt="${product.title}">
             <div class="card-body">
               <h3 class="card-title">${product.title}</h3>
+              <div class="card-price">${product.price}₽</div>
               <p class="card-desc">${product.description}</p>
               <div class="card-buttons">
                 <button class="btn add-to-cart" data-title="${product.title}">В корзину</button>
                 <button class="btn details" data-slug="${product.slug}">Подробнее</button>
-                
               </div>
             </div>
           `;

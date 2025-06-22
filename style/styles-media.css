@@ -1,0 +1,156 @@
+/* styles-media.css — responsive tweaks for MiToRi */
+
+/* ---------------------- Tablet (≤768px) ---------------------- */
+@media (max-width: 768px) {
+    /* Header: wrap items to allow nav and buttons visible */
+    .header-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+    /* Site logo full-width first line */
+    .logo {
+        flex: 1 1 100%;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    /* Navigation second line */
+    .main-nav {
+        display: flex !important;
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-bottom: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .main-nav ul {
+        gap: 12px;
+        white-space: nowrap;
+    }
+    /* Header-right third line */
+    .header-right {
+        display: flex;
+        flex: 1 1 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+    .delivery-btn,
+    .cart-link {
+        font-size: 1em;
+        margin: 0 8px;
+    }
+    .burger { display: none; }
+
+    /* Hero tweaks */
+    .hero-title { font-size: 1.6em; }
+    .hero-subtitle { font-size: 1em; }
+    .hero-button { font-size: 0.9em; padding: 0.6em 1em; }
+
+    /* Category nav */
+    .category-nav ul {
+        flex-wrap: nowrap;
+        gap: 12px;
+        overflow-x: auto;
+        padding: 0 10px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+    .category-nav a { min-width: 120px; }
+
+    /* Product grid */
+    .cards { grid-template-columns: repeat(2,1fr); gap: 15px; }
+
+    .wrapper { padding: 0 10px; }
+
+    /* About section */
+    .about-content { flex-direction: column; text-align: center; }
+    .about-text, .about-image { width: 100%; padding: 0; }
+    .about-image { margin-top: 20px; }
+
+    /* Card buttons under price */
+    .card-buttons { margin-top: 8px; display: flex; gap: 10px; }
+}
+
+/* ---------------------- Mobile (≤480px) ---------------------- */
+@media (max-width: 480px) {
+    /* Overlay header on hero */
+    .hero { position: relative; }
+    .header-container {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        display: flex; justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        background: transparent;
+        z-index: 1002;
+    }
+    .logo { font-size: 1.2em; }
+    /* Show nav centered */
+    .main-nav {
+        display: flex !important;
+        flex: 1 1 auto;
+        justify-content: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .main-nav ul { gap: 12px; white-space: nowrap; }
+    .burger { display: none !important; }
+    .delivery-btn, .cart-link { font-size: 0.85em; margin: 0 5px; }
+
+    /* Hero text */
+    .hero-title { font-size: 1.4em; }
+    .hero-subtitle { font-size: 0.9em; }
+    .hero-button { font-size: 0.8em; padding: 0.5em 0.8em; }
+
+    /* Category nav */
+    .category-nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        padding: 0 10px;
+        scroll-snap-type: x mandatory;
+        justify-content: flex-start;
+    }
+    .category-nav li { flex: 0 0 auto; }
+    .category-nav a { scroll-snap-align: start; flex: 0 0 auto; min-width: 100px; text-align: center; }
+
+    /* Order bar */
+    .mobile-order-bar {
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        height: 48px;
+        background: #FFF;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        z-index: 1001;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0 12px;
+        font-size: 0.85em;
+    }
+    .order-info { display: flex; gap: 12px; }
+    .order-info strong { color: #FF7F50; }
+    .mobile-cart-btn { font-size: 1.2em; }
+    .wrapper { padding-top: calc(20px + 48px); }
+
+    /* Product cards: 2 columns */
+    .cards { grid-template-columns: repeat(2,1fr); }
+    .card-desc { display: none; }
+
+    /* Buttons: include both "Подробнее" and "В корзину" */
+    .card-buttons {
+        margin-top: 6px;
+        display: flex;
+        gap: 6px;
+        justify-content: space-between; /* align buttons flush left and right */
+    }
+    .card-buttons .btn {
+        flex: 1;
+        font-size: 0.75em;
+        padding: 0.4em 0.6em;
+    }
+
+    /* About text */
+    .about-text p { font-size: 0.7em; line-height: 1.4; }
+}
