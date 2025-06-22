@@ -1,4 +1,3 @@
-/* product_styles.css ─ стили исключительно для single_product.html */
 @import url('https://db.onlinewebfonts.com/c/6901c6cae0d63f3e889863413e428394?family=F315karusel+Bold');
 
 .wrapper {
@@ -8,7 +7,6 @@
     padding: 0 20px;
 }
 
-/*  HERO-баннер*/
 .hero {
     position: relative;
     margin-top: 0;
@@ -17,7 +15,6 @@
     border-radius: 30px;
     overflow: hidden;
 
-    /* фон-картинка задаётся в JS */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +44,6 @@
     line-height: 1.15;
 }
 
-/* 3. INFO-контейнер («О блюде», Состав, Шаги)*/
 .info {
     background: #F7E9E9;
     margin-top: -30px;
@@ -55,7 +51,6 @@
     padding: 2rem 1.5rem 3rem;
 }
 
-/* 3.1 Заголовок, описание, кнопка*/
 .summary {
     display: flex;
     justify-content: space-between;
@@ -65,7 +60,6 @@
     padding: 1.4rem 0 2.2rem;
 }
 
-/* «О блюде» */
 .info-title {
     font-size: 2.6rem;
     color: #D47F8A;
@@ -79,7 +73,12 @@
     line-height: 1.45;
 }
 
-/* большая кнопка*/
+.logo-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
 .btn.add-to-cart {
     flex: 0 0 auto;
     margin-left: auto;
@@ -102,7 +101,6 @@
 }
 .btn.add-to-cart:hover { opacity: .85; }
 
-/*3.2 Блок «Состав» */
 .composition,
 .steps {
     background: #E49A71;
@@ -119,7 +117,6 @@
     font-size: 1.6rem;
 }
 
-/* раскладка: текст + фото */
 .composition-inner {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -152,7 +149,6 @@
     object-fit: cover;
 }
 
-/* 3.3 Список шагов */
 .steps ol {
     margin: 0;
     padding-left: 1.25rem;
@@ -161,11 +157,46 @@
     gap: .9rem;
 }
 
-/* 4. Адаптив до 700 px*/
 @media (max-width: 700px) {
+
     .summary              { flex-direction: column; align-items: flex-start; }
     .btn.add-to-cart      { width: 100%; margin: 1.2rem 0 0; justify-content: center; }
 
     .composition-inner { grid-template-columns: 1fr; }
     .comp-thumb        { width: 100%; margin-top: 1.5rem; }
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    .header-left,
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .delivery-btn,
+    .cart-link,
+    .burger {
+        margin: 0;
+        padding: 0;
+    }
+
+    .cart-link img,
+    .burger img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .delivery-btn {
+        font-size: 1rem;
+        line-height: 1;
+    }
 }
