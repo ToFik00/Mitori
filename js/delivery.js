@@ -216,4 +216,22 @@ document.addEventListener('DOMContentLoaded', () => {
   buildSlots();
   setupValidation();
   fillSummary();
+  
+  const burger    = document.querySelector('.burger');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const closeBtn  = document.querySelector('.close-btn');
+
+  burger.addEventListener('click', () => {
+    mobileNav.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+  });
+
+  mobileNav.addEventListener('click', e => {
+    if (e.target === mobileNav) {
+      mobileNav.classList.remove('active');
+    }
+  });
 });
