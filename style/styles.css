@@ -108,6 +108,30 @@ button {
     opacity: 0.8;
 }
 
+
+.cart-link {
+    position: relative;
+}
+
+.cart-link .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background: #FF7F50;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    line-height: 1;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+
 .burger {
     font-size: 1.5em;
     background: none;
